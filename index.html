@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrimeMovies🎬</title>
+    <style>
+        body{
+            max-width: 100vw;
+        }
+        header{
+            background-color: antiquewhite;
+            color: rgb(142, 12, 12);
+            text-align: center;
+            max-width: 800px; 
+            margin: 0 auto;
+            padding: 16px;
+        }
+        main{
+            background-color: rgb(142, 12, 12);
+            color:antiquewhite;
+            margin: 0 auto; 
+            padding: 16px:
+        }
+        img{
+            width:80px;
+            height:80px;
+        }
+        article{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            border: 1px solid darkblue;
+            margin: 16px;
+            gap: 16px;
+            padding: 16px;
+            flex: 1 1 25%;
+        }
+        .artigo-autor{
+            font-weight: bold;
+        }
+        footer{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <h1>PrimeMovies🎬</h1>
+    <p> Um espaço para explorar novas ideias de filmes e séries, do terror à comédia, da ação ao suspense. </p>
+    </header>
+    
+    <main>
+<article>
+    <img src="imagem-blog.png">
+        <div>
+    <h2> Minha primeira postagem sobre filmes e series.</h2>
+    <p>Por:Camila Rocateli</p>
+    <p>Boas vindas ao meu blog! Vou compartilhar recomendações 
+        de filmes e séries<br>
+    </p>
+    <button> 🎬<span>0</span></button>
+    <button> 🍿<span>0</span></button>
+        </div>
+    </article>
+
+    <article>
+    <img src="segundo.png">
+        <div>
+    <h2> Filmes feitos para VOCÊ!</h2>
+    <p>Por:Camila Rocateli</p>
+    <p>Gostaríamos de apresentar a você a nossa diversificada seleção de produções cinematográficas,
+         cuidadosamente pensada para você. 
+    <br>
+    </p>
+    <button> 💀<span>0</span></button>
+    <button> 👰🏻<span>0</span></button>
+        </div>
+    </article>
+    <article>
+    <img src="terceiro.png">
+        <div>
+    <h2>Você não pode fugir...</h2>
+    <p class="artigo-autor"> Por:Camila Rocateli</p>
+    <p>Não adianta você querer fugir daquilo que está dentro de você... Aquela vontade avassaladora de largar tudo,
+         deitar no sofá e assistir a um filminho comendo pipoca quentinha.
+    <br>
+    </p>
+    <button> 🛌🏻<span>0</span></button>
+    <button> 📽<span>0</span></button>
+        </div>
+    </article>
+    </main>
+
+    
+     <footer>
+<p><strong>Todos os direitos reservados a mim, autora do blog.</strong></p>
+
+    </footer>
+</body>
+<script>
+    const botoes = document.querySelectorAll("button");
+
+    botoes.forEach(function (botao) {
+        let curtiu = false;
+        botao.addEventListener("click", botaoClicado);
+
+        function botaoClicado() {
+            console.log("fui clicado");
+            let texto = botao.querySelector("span");
+
+            if (curtiu === false) {
+                texto.textContent++;
+                curtiu = true;
+            } else {
+                texto.textContent--;
+                curtiu = false;
+            }
+        }
+    });
+</script>
+</html>
+
